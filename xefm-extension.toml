@@ -1,0 +1,24 @@
+[extension]
+id = "webview-viewer"
+version = "0.1.0"
+api_version = 1
+name = "WebView Viewer"
+description = "Open the focused file in a WebView2 window: DWG/DXF in the CADXChange browser viewer, HTML/SVG/PDF as is. Esc or Q closes it."
+min_xefm = "1.11.0"
+platforms = ["windows"]
+updates = "github:SinisterSoftware/xefm-webview-viewer"
+
+[contributes.actions]
+"webview.open" = { entry = "webview_viewer.actions:open_file", description = "Open the cursor file in a WebView2 window (DWG/DXF/HTML/SVG/PDF)" }
+
+[contributes.menus]
+"webview.open" = { menus = ["file", "context"], label = "Open in WebView", when = "entry" }
+
+[contributes.key_suggestions]
+"webview.open" = ["Alt-Shift-W"]
+
+[requires]
+python_packages = ["pywebview"]
+
+[settings]
+defaults = "webview_viewer.settings:Settings"
