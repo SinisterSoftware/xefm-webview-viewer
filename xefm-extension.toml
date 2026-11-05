@@ -1,6 +1,6 @@
 [extension]
 id = "webview-viewer"
-version = "0.1.0"
+version = "0.1.1"
 api_version = 1
 name = "WebView Viewer"
 description = "Open the focused file in a WebView2 window: DWG/DXF in the CADXChange browser viewer, HTML/SVG/PDF as is. Esc or Q closes it."
